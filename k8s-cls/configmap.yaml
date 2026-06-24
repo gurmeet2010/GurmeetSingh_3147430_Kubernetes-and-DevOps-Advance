@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-config
+  namespace: customers-ns
+data:
+  DB_HOST: "postgres-service"
+  DB_PORT: "5432"
+  DB_NAME: "customersdb"
+  DB_USER: "postgres"
+  ASPNETCORE_ENVIRONMENT: "Production"
+  NAMESPACE: "customers-ns"
+
