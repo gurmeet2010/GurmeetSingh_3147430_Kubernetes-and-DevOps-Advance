@@ -105,7 +105,7 @@ Stores sensitive configuration values:
 
 ```text
 assignment/
-├── src/
+├── srcc/
 │   └── CustomersApi/
 │       ├── Program.cs
 │       ├── CustomersAPI.csproj
@@ -197,7 +197,7 @@ kubectl get nodes
 Navigate to the application directory:
 
 ```bash
-cd src/CustomersApi
+cd srcc/CustomersApi
 ```
 
 Build the Docker image:
