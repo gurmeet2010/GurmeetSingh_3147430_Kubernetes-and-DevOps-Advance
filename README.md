@@ -111,7 +111,7 @@ assignment/
 │       ├── CustomersAPI.csproj
 │       └── Dockerfile
 │
-├── k8s/
+├── k8s-cls/
 │   ├── 00-namespace.yaml
 │   ├── 01-configmap.yaml
 │   ├── 02-secret.yaml
@@ -237,23 +237,23 @@ kubectl get pods -n ingress-nginx
 Deploy Kubernetes resources in sequence:
 
 ```bash
-kubectl apply -f k8s/00-namespace.yaml
+kubectl apply -f k8s-cls/01-namespace.yaml
 
-kubectl apply -f k8s/01-configmap.yaml
+kubectl apply -f k8s-cls/02-configmap.yaml
 
-kubectl apply -f k8s/02-secret.yaml
+kubectl apply -f k8s-cls/03-secret.yaml
 
-kubectl apply -f k8s/03-db-statefulset.yaml
+kubectl apply -f k8s-cls/04-db-statefulset.yaml
 
-kubectl apply -f k8s/04-db-service.yaml
+kubectl apply -f k8s-cls/05-db-service.yaml
 
-kubectl apply -f k8s/05-api-deployment.yaml
+kubectl apply -f k8s-cls/06-api-deployment.yaml
 
-kubectl apply -f k8s/06-api-service.yaml
+kubectl apply -f k8s-cls/07-api-service.yaml
 
-kubectl apply -f k8s/07-ingress.yaml
+kubectl apply -f k8s-cls/08-ingress.yaml
 
-kubectl apply -f k8s/08-hpa.yaml
+kubectl apply -f k8s-cls/09-hpa.yaml
 ```
 
 Verify deployment:
